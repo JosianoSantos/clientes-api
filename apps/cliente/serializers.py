@@ -13,4 +13,4 @@ class ClienteListSerializer(serializers.ModelSerializer):
 class ClienteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cliente
-        fields = ('nome', 'idade', 'cidade')
+        fields = ['nome', 'idade', 'cidade']

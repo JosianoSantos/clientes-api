@@ -8,8 +8,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'localhost', '*']
 
-AUTH_USER_MODEL = 'usuario.Usuario'
-
 USE_THOUSAND_SEPARATOR = True
 
 THOUSAND_SEPARATOR = '.'
@@ -25,7 +23,6 @@ INSTALLED_APPS = [
 
     'rest_framework',
 
-    'apps.usuario',
     'apps.cliente',
 ]
 
@@ -69,7 +66,7 @@ DATABASES = {
     }
 }
 
-DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -103,7 +100,8 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [],
     'DEFAULT_PERMISSION_CLASSES': [],
     'DEFAULT_PAGINATION_CLASS': 'utils.paginator.HeaderPagination',
-    'PAGE_SIZE': 10
+    'PAGE_SIZE': 10,
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json'
 }
 
 AUTHENTICATION_BACKENDS = (
